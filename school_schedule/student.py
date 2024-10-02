@@ -15,8 +15,9 @@ class Student:
         return ", ".join(self.classes)
 
     def summary(self):
+        class_vs_classes = "class" if len(self.classes) == 1 else "classes"
         return (f"{self.name} is a {self.grade} "
-            f"enrolled in {self.get_num_classes()} classes: "
+            f"enrolled in {self.get_num_classes()} {class_vs_classes}: "
             f"{self.display_classes()}")
         
         
